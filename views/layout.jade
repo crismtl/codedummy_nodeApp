@@ -1,0 +1,21 @@
+doctype html
+html(lang="es")
+	head
+		title Fotos Blog
+		meta(charset="utf-8")
+		//en producción usar cdn: carga más rápido
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+		link(rel="stylesheet" href="/public/css/app.css")
+		script(src="/socket.io/socket.io.js")
+		script(src="/public/js/handlebars.js")
+	body
+		nav(class="large-padding black white-text")
+			ul
+				li
+					a(href="/app") Inicio
+				li
+					a(href="/app/imagenes/new") Subir imagen
+				li
+					a(href="/app/imagenes") Mis imágenes
+		//layout: todo lo a continuación varía según la vista
+		block contenido
